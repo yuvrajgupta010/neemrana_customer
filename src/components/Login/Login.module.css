@@ -1,0 +1,18 @@
+.section {
+  padding: 2.4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+}
+
+.secondary_heading {
+  font-size: 3.2rem;
+  padding-bottom: 3px;
+  font-size: 500;
+}
+
+.secondary_heading span {
+  border-bottom: 3px solid #070606;
+}

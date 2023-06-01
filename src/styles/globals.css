@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&family=Source+Sans+Pro:wght@300&display=swap");
+
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+- Letter spacing
+
+
+--- 02 COLORS
+
+- Primary: #493a3a
+- Tints:
+
+- Shades:
+
+- Accents:
+- Greys
+
+
+--- 05 SHADOWS
+
+
+--- 06 BORDER-RADIUS
+
+Default: 9px
+Medium: 11px
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  --color-grey-50: hsl(265, 55%, 96%);
+  --color-grey-100: hsl(265, 19%, 88%);
+  --color-grey-200: hsl(265, 7%, 70%);
+  --color-grey-300: hsl(265, 6%, 66%);
+  --color-grey-400: hsl(265, 4%, 57%);
+  --color-grey-500: hsl(265, 3%, 53%);
+  --color-grey-600: hsl(265, 4%, 42%);
+  --color-grey-700: hsl(265, 4%, 31%);
+  --color-grey-800: hsl(276, 5%, 20%);
+  --color-grey-900: hsl(280, 5%, 13%);
+
+  --body-background-color: #edebeb;
+
+  --header-color: #493a3a;
+  --nav-text-color: #dbd8d8;
+  --nav-text-color-on-hover: #fff;
+
+  --home-page-section-bg-color: #b6b0b0;
+
+  --bookroom-form-bg-color: #b6b0b0;
+  --bookroom-form-button-bg-color: #493a3a;
+  --bookroom-form-button-text-color: #dbd8d8;
+  --bookroom-form-button-text-color-on-hover: #fff;
+
+  --footer-bg-color: #493a3a;
+  --footer-text-color: #dbd8d8;
+
+  --all-heading-color: #070606;
+
+  --color-success-100: #a2f0bc;
+  --color-success-500: #12bd4b;
+
+  --color-error-100: #f1acc9;
+  --color-error-500: #a10c4a;
+
+  --error-button-bg-color: #493a3a;
+  --error-text-color: #dbd8da;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  background-color: var(--body-background-color);
+  overflow: hidden;
+  color: #252525;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+section {
+  min-height: 70vh;
+}
+
+input,
+input:hover,
+input:focus,
+textarea,
+textarea:hover,
+textarea:focus,
+select,
+select:hover,
+select:focus {
+  outline: none;
+  border: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}

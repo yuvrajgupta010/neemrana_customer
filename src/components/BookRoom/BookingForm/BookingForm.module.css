@@ -1,0 +1,68 @@
+.form {
+  background-color: #b6b0b0;
+  padding: 3.2rem 2.4rem;
+  border-radius: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem 2.4rem;
+}
+
+.grid_item_5 {
+  grid-column: 1 /-1;
+}
+.grid_item_6 {
+  grid-column: 1 /-1;
+}
+
+.input_field {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.input_field label {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.input_field input,
+.input_field select {
+  padding: 4px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border: none;
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+.input_field *:focus,
+.input_field input:hover,
+.input_field select:hover {
+  transition: all 0.3s;
+  outline: none;
+  box-shadow: 0 0 0 0.5rem rgba(253, 242, 233, 0.5);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.buttons button {
+  padding: 0.6rem 0.9rem;
+  color: var(--bookroom-form-button-text-color);
+  font-size: 1.6rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--bookroom-form-button-bg-color);
+  border: 3px solid transparent;
+}
+
+.buttons button:hover {
+  transition: all 0.3s;
+  background-color: var(--bookroom-form-button-text-color);
+  color: var(--bookroom-form-button-bg-color);
+  border: 3px solid var(--bookroom-form-button-bg-color);
+}

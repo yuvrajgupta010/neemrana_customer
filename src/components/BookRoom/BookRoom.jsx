@@ -73,7 +73,7 @@ const BookRoom = (props) => {
     setIsLoading(true);
     setUserSearchInput(inputs);
 
-    fetch("http://localhost:4000/customer/available-room", {
+    fetch("https://neemrana-hotel-api.onrender.com/customer/available-room", {
       method: "POST",
       body: JSON.stringify(inputs),
       headers: {
@@ -116,7 +116,7 @@ const BookRoom = (props) => {
         roomNo: roomNo,
         name: userData.customerName,
       };
-      fetch("http://localhost:4000/customer/book-room", {
+      fetch("https://neemrana-hotel-api.onrender.com/customer/book-room", {
         method: "POST",
         body: JSON.stringify(formatedData),
         headers: {

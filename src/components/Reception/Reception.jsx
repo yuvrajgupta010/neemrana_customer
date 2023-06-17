@@ -71,7 +71,7 @@ const Reception = (props) => {
       name: name,
       subject: subject,
     };
-    fetch("http://localhost:4000/customer/customer-query", {
+    fetch("https://neemrana-hotel-api.onrender.com/customer/customer-query", {
       method: "POST",
       body: JSON.stringify(formatedData),
       headers: {

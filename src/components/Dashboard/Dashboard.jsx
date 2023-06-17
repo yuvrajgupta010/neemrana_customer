@@ -61,7 +61,7 @@ const Dashboard = (props) => {
       router.push("/");
       return;
     }
-    fetch("http://localhost:4000/customer/present-bookings", {
+    fetch("https://neemrana-hotel-api.onrender.com/customer/present-bookings", {
       method: "GET",
       headers: {
         Authorization: token,
@@ -73,12 +73,15 @@ const Dashboard = (props) => {
       .then((data) => {
         const { presentBookings = [] } = data;
         setPresentBookingData(presentBookings);
-        return fetch("http://localhost:4000/customer/past-bookings", {
-          method: "GET",
-          headers: {
-            Authorization: token,
-          },
-        });
+        return fetch(
+          "https://neemrana-hotel-api.onrender.com/customer/past-bookings",
+          {
+            method: "GET",
+            headers: {
+              Authorization: token,
+            },
+          }
+        );
       })
       .then((res) => {
         return res.json();
@@ -118,7 +121,7 @@ const Dashboard = (props) => {
         currentPassword: data.currentPassword,
         newPassword: data.newPassword,
       };
-      fetch("http://localhost:4000/customer/reset-password", {
+      fetch("https://neemrana-hotel-api.onrender.com/customer/reset-password", {
         method: "POST",
         body: JSON.stringify(formatedData),
         headers: {
@@ -149,7 +152,7 @@ const Dashboard = (props) => {
         return booking.bookingId !== bookId;
       });
       setPresentBookingData(filteredBooking);
-      fetch("http://localhost:4000/customer/cancel-booking", {
+      fetch("https://neemrana-hotel-api.onrender.com/customer/cancel-booking", {
         method: "POST",
         body: JSON.stringify({ bookingId: bookId }),
         headers: {

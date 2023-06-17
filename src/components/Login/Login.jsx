@@ -66,13 +66,16 @@ const Login = (props) => {
           password: data.password,
         };
 
-        fetch("http://localhost:4000/customer/create-account", {
-          method: "POST",
-          body: JSON.stringify(formatedData),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        })
+        fetch(
+          "https://neemrana-hotel-api.onrender.com/customer/create-account",
+          {
+            method: "POST",
+            body: JSON.stringify(formatedData),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        )
           .then((res) => {
             if (!res.ok) {
               throw new Error("Your email and contact no. already exist !");
@@ -93,7 +96,7 @@ const Login = (props) => {
           email: data.email.toLocaleLowerCase(),
           password: data.password.trim(),
         };
-        fetch("http://localhost:4000/customer/login", {
+        fetch("https://neemrana-hotel-api.onrender.com/customer/login", {
           method: "POST",
           body: JSON.stringify(formatedData),
           headers: {
@@ -122,13 +125,16 @@ const Login = (props) => {
           });
       } else if (formType === "forget password") {
         const formatedData = data;
-        fetch("http://localhost:4000/customer/forget-password", {
-          method: "POST",
-          body: JSON.stringify(formatedData),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        })
+        fetch(
+          "https://neemrana-hotel-api.onrender.com/customer/forget-password",
+          {
+            method: "POST",
+            body: JSON.stringify(formatedData),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        )
           .then((res) => {
             if (!res.ok) {
               let message;
@@ -166,14 +172,17 @@ const Login = (props) => {
           const formatedData = {
             password: data.password,
           };
-          fetch("http://localhost:4000/customer/new-password", {
-            method: "POST",
-            body: JSON.stringify(formatedData),
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: forgetPasswordToken,
-            },
-          })
+          fetch(
+            "https://neemrana-hotel-api.onrender.com/customer/new-password",
+            {
+              method: "POST",
+              body: JSON.stringify(formatedData),
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: forgetPasswordToken,
+              },
+            }
+          )
             .then((res) => {
               if (!res.ok) {
                 throw new Error("Unauthorised request !");

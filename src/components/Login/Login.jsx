@@ -119,7 +119,7 @@ const Login = (props) => {
             onSuccessfullLogin(data);
           })
           .catch((err) => {
-            setFlashMessage(err.messsage, true);
+            setFlashMessage(err.message, true);
             setHaveError(true);
             console.error(err.message);
           });

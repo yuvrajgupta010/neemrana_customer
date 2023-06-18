@@ -95,7 +95,7 @@ const Footer = (props) => {
             </li>
             <li>
               <Link
-                href={"/book-room"}
+                href={"/bookroom"}
                 className={`${classes.link} ${
                   url === "/bookroom" ? classes["active"] : ""
                 }`}
